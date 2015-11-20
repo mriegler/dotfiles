@@ -7,6 +7,7 @@
     ~/.vimrc: vimrc
     ~/.spacemacs: spacemacs
     ~/.profile: profile
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

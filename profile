@@ -10,7 +10,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Spacemacs emacs PATH addition
 export PATH=/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin:$PATH
 
-alias ll='ls -alh'
+alias ll='ls -alh --colors always'
 
 # Make GUI Emacs usable from cli
 alias emacs='open -a /Applications/Emacs.app $1'

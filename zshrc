@@ -50,8 +50,12 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github jira vagrant ansible virtualenv pip python brew osx zsh-syntax-highlighting zsh-autosuggestions)
-
+plugins=(git colored-man colorize github vagrant z emacs npm virtualenv pip python brew osx zsh-syntax-highlighting zsh-autosuggestions history-substring-search)
+# Enable autosuggestions automatically.
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
 # User configuration
 # PATH Adjustments
 

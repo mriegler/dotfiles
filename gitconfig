@@ -14,7 +14,7 @@
 [push]
 	default = matching
 [pull]
-	rebase = true
+	rebase = preserve
 [credential]
 	helper = store
 [color]

@@ -200,7 +200,10 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (setq powerline-default-separator 'arrow))
+  (setq powerline-default-separator 'arrow)
+  (add-to-list 'auto-mode-alist '("\\.tml\\'" . html-mode))
+  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

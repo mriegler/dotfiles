@@ -32,6 +32,8 @@ values."
      html
      osx
      javascript
+     common-lisp
+     scala
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -203,7 +205,9 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'arrow)
+  (setq mac-option-modifier nil) ;; Cant type umlauts in OS X otherwise
   (add-to-list 'auto-mode-alist '("\\.tml\\'" . html-mode))
+  (add-to-list 'auto-mode-alist '("\\.ftl\\'" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode)))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

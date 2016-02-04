@@ -7,6 +7,7 @@
     ~/.profile: profile
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
     ~/.oh-my-zsh/custom:
       force: true
       path: oh-my-zsh-custom 

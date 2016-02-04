@@ -208,7 +208,10 @@ layers configuration. You are free to put any user code."
   (setq mac-option-modifier nil) ;; Cant type umlauts in OS X otherwise
   (add-to-list 'auto-mode-alist '("\\.tml\\'" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.ftl\\'" . html-mode))
-  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode)))
+  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode))
+  (add-to-list 'projectile-globally-ignored-directories "node_modules")
+  (add-to-list 'projectile-globally-ignored-directories "platforms"))
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables

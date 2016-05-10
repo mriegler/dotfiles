@@ -8,6 +8,8 @@
 	excludesfile = /Users/marcel/.gitignore_global
 [web]
 	browser = google-chrome
+[http]
+    postBuffer = 524288000
 [rerere]
 	enabled = 1
 	autoupdate = 1
@@ -155,6 +157,7 @@
 	#############
 	s = status
 	sb = status -s -b
+    su = status -uno
 	#############
 	sa = stash apply
 	sc = stash clear

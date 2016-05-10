@@ -34,6 +34,7 @@ values."
      javascript
      common-lisp
      scala
+     haskell
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -208,9 +209,7 @@ layers configuration. You are free to put any user code."
   (setq mac-option-modifier nil) ;; Cant type umlauts in OS X otherwise
   (add-to-list 'auto-mode-alist '("\\.tml\\'" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.ftl\\'" . html-mode))
-  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode))
-  (add-to-list 'projectile-globally-ignored-directories "node_modules")
-  (add-to-list 'projectile-globally-ignored-directories "platforms"))
+  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode)))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -220,6 +219,10 @@ layers configuration. You are free to put any user code."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(flycheck-display-errors-delay 0.2)
+ '(js2-pretty-multiline-declarations (quote ##))
+ '(projectile-globally-ignored-directories
+   (quote
+    (".idea" ".eunit" ".git" ".hg" ".fslckout" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "node_modules" "platforms")))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -8,6 +8,7 @@
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf
+    ~/.agignore: agignore
     ~/.oh-my-zsh/custom:
       force: true
       path: oh-my-zsh-custom 

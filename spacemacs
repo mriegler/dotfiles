@@ -209,7 +209,7 @@ layers configuration. You are free to put any user code."
   (setq mac-option-modifier nil) ;; Cant type umlauts in OS X otherwise
   (add-to-list 'auto-mode-alist '("\\.tml\\'" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.ftl\\'" . html-mode))
-  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode)))
+  (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -218,6 +218,7 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(avy-all-windows nil)
  '(flycheck-display-errors-delay 0.2)
  '(js2-pretty-multiline-declarations (quote ##))
  '(projectile-globally-ignored-directories
@@ -230,4 +231,4 @@ layers configuration. You are free to put any user code."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))))

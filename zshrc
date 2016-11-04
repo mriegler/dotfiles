@@ -26,7 +26,8 @@ HIST_REDUCE_BLANKS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github vagrant z emacs npm virtualenv pip python brew osx zsh-syntax-highlighting zsh-autosuggestions history-substring-search)
+plugins=(git colored-man colorize github vagrant z emacs npm virtualenv pip python \
+    brew osx zsh-syntax-highlighting zsh-autosuggestions history-substring-search tmuxinator)
 # Enable autosuggestions automatically.
 zle-line-init() {
     zle autosuggest-start
@@ -39,9 +40,13 @@ zle -N zle-line-init
 # Android SDK
 export PATH=/Users/marcel/Library/Android/sdk/tools:$PATH
 export PATH=/Users/marcel/Library/Android/sdk/platform-tools:$PATH
+export ANDROID_HOME=/Users/marcel/Library/Android/sdk
 
 # MacPorts Installer addition on 2015-11-16_at_13:00:39: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# Air SDK custom bin location
+export PATH="/Library/AirSDK/bin:$PATH"
 
 alias ll='ls -alhG'
 

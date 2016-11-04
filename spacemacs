@@ -28,6 +28,7 @@ values."
      emacs-lisp
      git
      markdown
+     dockerfile
      yaml
      html
      osx

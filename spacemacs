@@ -28,20 +28,17 @@ values."
      emacs-lisp
      git
      markdown
-     dockerfile
      yaml
      html
      osx
      javascript
-     common-lisp
-     scala
      haskell
-     ;; org
+     org
+     syntax-checking
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     syntax-checking
      ;; version-control
      )
    ;; List of additional packages that will be installed without being

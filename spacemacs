@@ -211,7 +211,6 @@ layers configuration. You are free to put any user code."
   (add-to-list 'auto-mode-alist '("\\.ftl\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode))
 
-  (spacemacs/set-leader-keys "jj" 'avy-goto-char-timer) ;; Overwrites default goto-char binding
   ;; Do not write anything past this comment. This is where Emacs will
   ;; auto-generate custom variable definitions.
   (custom-set-variables

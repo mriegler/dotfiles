@@ -48,12 +48,18 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Air SDK custom bin location
 export PATH="/Library/AirSDK/bin:$PATH"
 
+# Java home
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 alias ll='ls -alhG'
 
 # Make GUI Emacs usable from cli
 alias emacs='open -a /Applications/Emacs.app $1'
 export ALTERNATE_EDITOR=""
 export EDITOR="emacs"
+
+# Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -83,3 +89,5 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

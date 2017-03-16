@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     typescript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -210,6 +211,10 @@ layers configuration. You are free to put any user code."
   (add-to-list 'auto-mode-alist '("\\.tml\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.ftl\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.tmlscript\\'" . javascript-mode))
+
+  ;; Org Mode Variables
+  (setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s)" "WAIT(w)" "|" "DONE(d)" "CANCELED(c)")))
+  ;; (add-to-list 'org-agenda-files "~/org")
 
   ;; Do not write anything past this comment. This is where Emacs will
   ;; auto-generate custom variable definitions.

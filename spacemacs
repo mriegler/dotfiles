@@ -18,6 +18,8 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     vimscript
+     ruby
      typescript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -35,6 +37,7 @@ values."
      javascript
      haskell
      org
+     ansible
      syntax-checking
      ;; (shell :variables
      ;;        shell-default-height 30

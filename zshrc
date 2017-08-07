@@ -26,7 +26,7 @@ HIST_REDUCE_BLANKS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github vagrant z emacs npm virtualenv pip python \
+plugins=(git colored-man colorize github vagrant z emacs npm docker virtualenv pip python \
     brew osx zsh-syntax-highlighting zsh-autosuggestions history-substring-search tmuxinator)
 # Enable autosuggestions automatically.
 zle-line-init() {
@@ -48,8 +48,9 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Air SDK custom bin location
 export PATH="/Library/AirSDK/bin:$PATH"
 
-# Java home
+# Java home and bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export PATH=$JAVA_HOME/bin:$PATH
 
 alias ll='ls -alhG'
 
@@ -67,9 +68,6 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# Load ssh key into agent on sierra
-ssh-add -K
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

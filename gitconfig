@@ -20,6 +20,8 @@
 	rebase = preserve
 [diff]
 	wordRegex = .
+[diff "sketch"]
+    textconv = unzip -c -a
 [credential]
 	helper = store
 [color]

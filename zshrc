@@ -20,8 +20,21 @@ HIST_REDUCE_BLANKS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github vagrant z emacs npm docker virtualenv pip python \
-    brew osx zsh-syntax-highlighting zsh-autosuggestions history-substring-search tmuxinator)
+plugins=(colored-man-pages \
+    vagrant \
+    z \
+    vi-mode \
+    emacs \
+    npm \
+    docker \
+    pip \
+    python \
+    brew \
+    osx \
+    zsh-syntax-highlighting \
+    zsh-autosuggestions \
+    history-substring-search \
+    vi-mode)
 # Enable autosuggestions automatically.
 zle-line-init() {
     zle autosuggest-start

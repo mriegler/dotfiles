@@ -2,11 +2,21 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# Set up check for running on Windows/WSL
+if [[ $(uname -r) =~ Microsoft$ ]]; then
+    isWindows=true
+fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
+# Use a prompt without git on WSL, because git is super slow
+if [[ "$isWindows" = true ]]; then
+    ZSH_THEME="xiong-chiamiov"
+else
+    ZSH_THEME="avit"
+fi
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.

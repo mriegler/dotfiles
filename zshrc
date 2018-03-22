@@ -1,29 +1,13 @@
 # -*- mode: conf-*-
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
 
 # Set up check for running on Windows/WSL
 if [[ $(uname -r) =~ Microsoft$ ]]; then
     isWindows=true
 fi
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# Use a prompt without git on WSL, because git is super slow
-if [[ "$isWindows" = true ]]; then
-    ZSH_THEME="xiong-chiamiov"
-else
-    ZSH_THEME="avit"
-fi
-
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to enable command auto-correction.
-#ENABLE_CORRECTION="true"
 
 # Modify History
 SHARE_HISTORY="true"
@@ -43,62 +27,45 @@ zle-line-init() {
     zle autosuggest-start
 }
 zle -N zle-line-init
-# User configuration
 
 # PATH Adjustments
-
 # Android SDK
 export PATH=/Users/marcel/Library/Android/sdk/tools:$PATH
 export PATH=/Users/marcel/Library/Android/sdk/platform-tools:$PATH
 export ANDROID_HOME=/Users/marcel/Library/Android/sdk
-
 # MacPorts Installer addition on 2015-11-16_at_13:00:39: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-
 # Air SDK custom bin location
 export PATH="/Library/AirSDK/bin:$PATH"
-
 # Java home and bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$JAVA_HOME/bin:$PATH
-
-alias ll='ls -alhG'
-
-# Make GUI Emacs usable from cli
-alias emacs='open -a /Applications/Emacs.app $1'
-export ALTERNATE_EDITOR=""
-export EDITOR="vi"
-
 # Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# Aliases
+alias ll='ls -alhG'
+alias emacs='open -a /Applications/Emacs.app $1'
 
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
+# Settings
+export ALTERNATE_EDITOR=""
+export EDITOR="vi"
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Oh my ZSH
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# Set name of the theme to load.
+# Use a prompt without git on WSL, because git is super slow
+if [[ "$isWindows" = true ]]; then
+    ZSH_THEME="xiong-chiamiov"
+else
+    ZSH_THEME="avit"
+fi
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# start oh my zsh
+source $ZSH/oh-my-zsh.sh
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

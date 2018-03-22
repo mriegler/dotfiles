@@ -67,7 +67,7 @@ alias ll='ls -alhG'
 # Make GUI Emacs usable from cli
 alias emacs='open -a /Applications/Emacs.app $1'
 export ALTERNATE_EDITOR=""
-export EDITOR="emacs"
+export EDITOR="vi"
 
 # Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"

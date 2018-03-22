@@ -46,6 +46,7 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 # Aliases
 alias ll='ls -alhG'
 alias emacs='open -a /Applications/Emacs.app $1'
+alias g=git
 
 # Settings
 export ALTERNATE_EDITOR=""

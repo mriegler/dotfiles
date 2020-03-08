@@ -1,12 +1,12 @@
 # -*- mode: gitconfig-*-
 [user]
 	name = Marcel Riegler
-	email = mriegler@gmx.de
+	email = mr@avance-marketing.de
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/marcel/.gitignore_global
-	precomposeunicode = false
+	precomposeunicode = true
 [web]
 	browser = google-chrome
 [http]
@@ -15,7 +15,7 @@
 	enabled = 1
 	autoupdate = 1
 [push]
-	default = matching
+	default = simple
 [pull]
 	rebase = preserve
 [diff]
@@ -198,6 +198,7 @@
 	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 	alias = config --get-regexp ^alias\\.
+	root = !pwd
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

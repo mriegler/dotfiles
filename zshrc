@@ -51,10 +51,12 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Air SDK custom bin location
 export PATH="/Library/AirSDK/bin:$PATH"
 # Java home and bin
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export PATH=$JAVA_HOME/bin:$PATH
 # Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Aliases
 alias ll='ls -alhG'

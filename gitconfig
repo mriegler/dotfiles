@@ -1,12 +1,13 @@
 # -*- mode: gitconfig-*-
 [user]
 	name = Marcel Riegler
-	email = mr@avance-marketing.de
+	email = marcel.riegler@port-neo.com
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/marcel/.gitignore_global
 	precomposeunicode = true
+	autocrlf = input
 [web]
 	browser = google-chrome
 [http]

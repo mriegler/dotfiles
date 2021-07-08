@@ -50,9 +50,12 @@ export ANDROID_HOME=/Users/marcel/Library/Android/sdk
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Air SDK custom bin location
 export PATH="/Library/AirSDK/bin:$PATH"
+
 # Java home and bin
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_NEWEST=$(/usr/libexec/java_home) # for quick switching
+
 # Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 

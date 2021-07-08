@@ -68,7 +68,7 @@ export ALTERNATE_EDITOR=""
 export EDITOR="vi"
 export LANG=en_US.UTF-8
 export REBEL_BASE="/Users/marcel.riegler/.jrebel"
-export REBEL_HOME="/Users/marcel.riegler/Library/Application Support/JetBrains/IntelliJIdea2021.1/plugins/jr-ide-idea/lib/jrebel6"
+export REBEL_HOME="~/Downloads/jrebel"
 
 # Oh my ZSH
 # Path to your oh-my-zsh installation.

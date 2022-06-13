@@ -1,4 +1,6 @@
 live_config_reload: true
 
 font:
+  normal:
+    family: Inconsolata Nerd Font Mono
   size: 20.0

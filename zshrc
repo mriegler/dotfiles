@@ -23,7 +23,6 @@ HIST_REDUCE_BLANKS="true"
 plugins=(colored-man-pages \
     vagrant \
     z \
-    vi-mode \
     emacs \
     npm \
     docker \
@@ -68,10 +67,10 @@ alias g=git
 
 # Settings
 export ALTERNATE_EDITOR=""
-export EDITOR="vi"
+export EDITOR="vim"
+export VISUAL="vim"
 export LANG=en_US.UTF-8
-export REBEL_BASE="/Users/marcel.riegler/.jrebel"
-export REBEL_HOME="~/Downloads/jrebel"
+export REBEL_HOME="/Users/marcel.riegler/Downloads/jrebel"
 
 # Oh my ZSH
 # Path to your oh-my-zsh installation.
@@ -97,3 +96,4 @@ source $ZSH/oh-my-zsh.sh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+export PATH="/usr/local/opt/node@12/bin:$PATH"

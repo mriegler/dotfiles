@@ -19,6 +19,8 @@
       path: oh-my-zsh-custom 
     ~/.config/karabiner: karabiner
     ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.ideavimrc: ideavimrc
+    ~/.atamanrc.config: atamanrc.config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

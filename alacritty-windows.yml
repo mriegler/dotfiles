@@ -1,0 +1,6 @@
+shell:
+  program: ubuntu
+font:
+  size: 15.0
+import:
+  - "~/AppData/Roaming/alacritty/alacritty-base.yml"

@@ -14,9 +14,6 @@
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf
     ~/.agignore: agignore
-    ~/.oh-my-zsh/custom:
-      force: true
-      path: oh-my-zsh-custom 
     ~/.config/karabiner: karabiner
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.ideavimrc: ideavimrc

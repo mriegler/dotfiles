@@ -1,5 +1,19 @@
 # -*- mode: conf-*-
 
+# setup zgenom, simple plugin manager
+source ~/.dotfiles/zgenom/zgenom.zsh
+
+# update every 7 days
+zgenom autoupdate
+
+if ! zgenom saved; then
+    zgenom load zsh-users/zsh-autosuggestions
+    zgenom load zsh-users/zsh-syntax-highlighting
+    zgenom load marlonrichert/zsh-autocomplete
+    
+    zgenom save
+fi
+
 # Set up check for running on Windows/WSL
 if [[ $(uname -r) =~ Microsoft$ ]]; then
     isWindows=true
@@ -15,30 +29,6 @@ EXTENDED_HISTORY="true"
 HIST_IGNORE_DUPS="true"
 HIST_IGNORE_ALL_DUPS="true"
 HIST_REDUCE_BLANKS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages \
-    vagrant \
-    z \
-    emacs \
-    npm \
-    docker \
-    pip \
-    python \
-    brew \
-    osx \
-    zsh-syntax-highlighting \
-    zsh-autosuggestions \
-    history-substring-search \
-    vi-mode)
-# Enable autosuggestions automatically.
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
 
 # PATH Adjustments
 # Android SDK
@@ -72,20 +62,22 @@ export VISUAL="vim"
 export LANG=en_US.UTF-8
 export REBEL_HOME="/Users/marcel.riegler/Downloads/jrebel"
 
-# Oh my ZSH
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-
-# Set name of the theme to load.
-# Use a prompt without git on WSL, because git is super slow
-if [[ "$isWindows" = true ]]; then
-    ZSH_THEME="xiong-chiamiov"
+# Start Zsh  theme/prompt starship
+if ! type starship &>/dev/null
+then
+    curl -sS https://starship.rs/install.sh | sh
+    eval "$(starship init zsh)"
 else
-    ZSH_THEME="avit"
+    eval "$(starship init zsh)"
 fi
 
-# start oh my zsh
-source $ZSH/oh-my-zsh.sh
+# add homebrew autocompletions
+if type brew &>/dev/null
+then
+      FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+      autoload -Uz compinit
+      compinit
+fi
 
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -97,3 +89,11 @@ source $ZSH/oh-my-zsh.sh
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+VI_MODE_SET_CURSOR=true
+
+# add asdf shims
+. /usr/local/opt/asdf/libexec/asdf.sh
+
+# add asdf java_home automatically
+. ~/.asdf/plugins/java/set-java-home.zsh

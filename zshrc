@@ -37,7 +37,6 @@ source ~/.dotfiles/zgenom/zgenom.zsh
 zgenom autoupdate
 
 if ! zgenom saved; then
-    zgenom load zsh-users/zsh-autosuggestions
     zgenom load marlonrichert/zsh-autocomplete
     zgenom load zsh-users/zsh-syntax-highlighting
     zgenom ohmyzsh plugins/vi-mode

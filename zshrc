@@ -1,5 +1,35 @@
 # -*- mode: conf-*-
 
+########
+# Helpers
+########
+function ensure() {
+    local com=$1
+    local program=$com
+    if [[ $# == 2 ]]; then
+        local program=$2
+    fi
+    if ! type $com &>/dev/null; then
+        install $program
+    fi
+}
+
+function install() {
+    local program=$1
+    if type brew &>/dev/null; then
+        brew install -y $program
+    elif type apt &>/dev/null; then
+        apt install -y $program
+    else
+        echo "install $program by hand"
+    fi
+}
+
+# Set up check for running on Windows/WSL
+if [[ $(uname -r) =~ Microsoft$ ]]; then
+    isWindows=true
+fi
+
 # setup zgenom, simple plugin manager
 source ~/.dotfiles/zgenom/zgenom.zsh
 
@@ -14,10 +44,6 @@ if ! zgenom saved; then
     zgenom save
 fi
 
-# Set up check for running on Windows/WSL
-if [[ $(uname -r) =~ Microsoft$ ]]; then
-    isWindows=true
-fi
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -63,13 +89,8 @@ export LANG=en_US.UTF-8
 export REBEL_HOME="/Users/marcel.riegler/Downloads/jrebel"
 
 # Start Zsh  theme/prompt starship
-if ! type starship &>/dev/null
-then
-    curl -sS https://starship.rs/install.sh | sh
-    eval "$(starship init zsh)"
-else
-    eval "$(starship init zsh)"
-fi
+ensure starship
+eval "$(starship init zsh)"
 
 # add homebrew autocompletions
 if type brew &>/dev/null
@@ -97,3 +118,4 @@ VI_MODE_SET_CURSOR=true
 
 # add asdf java_home automatically
 . ~/.asdf/plugins/java/set-java-home.zsh
+

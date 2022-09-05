@@ -38,8 +38,9 @@ zgenom autoupdate
 
 if ! zgenom saved; then
     zgenom load zsh-users/zsh-autosuggestions
-    zgenom load zsh-users/zsh-syntax-highlighting
     zgenom load marlonrichert/zsh-autocomplete
+    zgenom load zsh-users/zsh-syntax-highlighting
+    zgenom ohmyzsh plugins/vi-mode
     
     zgenom save
 fi
@@ -91,6 +92,10 @@ export REBEL_HOME="/Users/marcel.riegler/Downloads/jrebel"
 # Start Zsh  theme/prompt starship
 ensure starship
 eval "$(starship init zsh)"
+
+# Setup Zoxide, for fast directory switching
+ensure zoxide
+eval "$(zoxide init zsh)"
 
 # add homebrew autocompletions
 if type brew &>/dev/null

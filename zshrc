@@ -110,7 +110,13 @@ fi
 VI_MODE_SET_CURSOR=true
 
 # add asdf shims
-. /usr/local/opt/asdf/libexec/asdf.sh
+if [[ -f /usr/local/opt/asdf/libexec/asdf.sh ]];
+then
+    source /usr/local/opt/asdf/libexec.asdf.sh
+elif [[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]];
+then
+    source /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
 
 # add asdf java_home automatically
 . ~/.asdf/plugins/java/set-java-home.zsh

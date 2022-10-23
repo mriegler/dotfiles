@@ -17,7 +17,7 @@ function ensure() {
 function install() {
     local program=$1
     if type brew &>/dev/null; then
-        brew install -y $program
+        brew install $program
     elif type apt &>/dev/null; then
         apt install -y $program
     else

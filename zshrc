@@ -44,11 +44,6 @@ if ! zgenom saved; then
     zgenom save
 fi
 
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
-
 # Modify History
 setopt SHARE_HISTORY
 setopt EXTENDED_HISTORY
@@ -65,13 +60,6 @@ SAVEHIST=500000
 export PATH=/Users/marcel/Library/Android/sdk/tools:$PATH
 export PATH=/Users/marcel/Library/Android/sdk/platform-tools:$PATH
 export ANDROID_HOME=/Users/marcel/Library/Android/sdk
-# MacPorts Installer addition on 2015-11-16_at_13:00:39: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Air SDK custom bin location
-export PATH="/Library/AirSDK/bin:$PATH"
-
-# Fastlane
-export PATH="$HOME/.fastlane/bin:$PATH"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 

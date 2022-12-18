@@ -40,7 +40,7 @@ if ! zgenom saved; then
     zgenom load marlonrichert/zsh-autocomplete
     zgenom load zsh-users/zsh-syntax-highlighting
     zgenom ohmyzsh plugins/vi-mode
-    
+
     zgenom save
 fi
 
@@ -50,11 +50,15 @@ fi
 HYPHEN_INSENSITIVE="true"
 
 # Modify History
-SHARE_HISTORY="true"
-EXTENDED_HISTORY="true"
-HIST_IGNORE_DUPS="true"
-HIST_IGNORE_ALL_DUPS="true"
-HIST_REDUCE_BLANKS="true"
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=500000
+SAVEHIST=500000
 
 # PATH Adjustments
 # Android SDK

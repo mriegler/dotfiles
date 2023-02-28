@@ -9,7 +9,6 @@
     ~/.dotfiles: ''
     ~/.vimrc: vimrc
     ~/.spacemacs: spacemacs
-    ~/.profile: profile
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf
@@ -18,6 +17,8 @@
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.ideavimrc: ideavimrc
     ~/.atamanrc.config: atamanrc.config
+    ~/.tool-versions: tool-versions
+    ~/Brewfile: Brewfile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -58,6 +58,8 @@ export REBEL_HOME="/Users/marcel.riegler/Downloads/jrebel"
 # Start Zsh  theme/prompt starship
 eval "$(starship init zsh)"
 
+eval "$(zoxide init zsh)"
+
 # add homebrew autocompletions
 if type brew &>/dev/null
 then

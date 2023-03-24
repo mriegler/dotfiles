@@ -1,7 +1,7 @@
 # -*- mode: conf-*-
 
 # run first time setup
-if [ ! -f "~/.SETUP_DONE" ]; then
+if [ ! -f ~/.SETUP_DONE ]; then
     ~/dotfiles/setup.sh
 fi
 
@@ -72,4 +72,4 @@ fi
 VI_MODE_SET_CURSOR=true
 
 # enable rtx
-eval "$(/home/marcel/.local/share/rtx/bin/rtx activate -s zsh)"
+eval "$(rtx activate -s zsh)"

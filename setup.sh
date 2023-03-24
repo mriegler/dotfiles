@@ -14,4 +14,5 @@ brew bundle
 rtx install
 
 touch .SETUP_DONE
+date > .SETUP_DONE
 

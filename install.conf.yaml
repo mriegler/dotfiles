@@ -10,7 +10,8 @@
     ~/.vimrc: vimrc
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
+    ~/.config/zsh/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
     ~/.tmux.conf: tmux.conf
     ~/.agignore: agignore
     ~/.config/karabiner: karabiner

@@ -64,6 +64,7 @@ alias g=git
 export ALTERNATE_EDITOR=""
 export EDITOR="vim"
 export VISUAL="vim"
+VI_MODE_SET_CURSOR=true
 export LANG=en_US.UTF-8
 export REBEL_HOME="/Users/marcel.riegler/Downloads/jrebel"
 
@@ -76,7 +77,6 @@ eval "$(zoxide init zsh)"
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-VI_MODE_SET_CURSOR=true
 
 # enable rtx
 eval "$(rtx activate -s zsh)"
@@ -87,11 +87,12 @@ then
       export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-# Plugin settings
+# ZSH Autocomplete Plugin Settings
 bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
 zstyle ':autocomplete:*history*:*' insert-unambiguous yes
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+zstyle ':autocomplete:*' min-delay 0.05
 
 # Completions
 # Zsh compdump file.

@@ -11,6 +11,7 @@
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
     ~/.config/zsh/.zshrc: zsh/zshrc
+    ~/.config/zsh/.p10k.zsh: zsh/p10k.zsh
     ~/.zshenv: zsh/zshenv
     ~/.tmux.conf: tmux.conf
     ~/.agignore: agignore

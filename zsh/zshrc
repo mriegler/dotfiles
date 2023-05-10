@@ -68,7 +68,7 @@ export ANDROID_HOME=/Users/marcel/Library/Android/sdk
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Aliases
-alias ll='ls -alhG'
+alias ll='exa --icons -alhG --git'
 alias emacs='open -a /Applications/Emacs.app $1'
 alias g=git
 alias -- ..="cd .."

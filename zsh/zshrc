@@ -9,6 +9,7 @@ fi
 
 
 # Setup homebrew
+# under macos or linux
 if [[ -d /opt/homebrew ]]; then
     export HOMEBREW_PREFIX="/opt/homebrew";
     export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
@@ -16,13 +17,15 @@ if [[ -d /opt/homebrew ]]; then
     export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
     export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
     export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+elif [[ -d /home/linuxbrew ]]; then
+    export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+    export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+    export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+    export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+    export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+    export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 fi
     
-# run first time setup
-if [ ! -f ~/.SETUP_DONE ]; then
-    ~/dotfiles/setup.sh
-fi
-
 # Set up check for running on Windows/WSL
 if [[ $(uname -r) =~ Microsoft$ ]]; then
     isWindows=true

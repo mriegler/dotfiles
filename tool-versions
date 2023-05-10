@@ -1,4 +1,4 @@
 nodejs 16
-mvnd   latest
+mvnd   1.0.0
 java   openjdk-11
 python 3.9

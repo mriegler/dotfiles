@@ -27,3 +27,9 @@
   - [git submodule update --init --recursive, Installing submodules]
   - [stat /mnt/c/ &>/dev/null && cp -r alacritty.yml /mnt/c/Users/mrieg/AppData/Roaming/alacritty/alacritty-base.yml,  Copying alacritty settings for Windows] 
   - [stat /mnt/c/ &>/dev/null && cp -r alacritty-windows.yml /mnt/c/Users/mrieg/AppData/Roaming/alacritty/alacritty.yml,  Copying alacritty settings for Windows] 
+  - command: ./setup.sh
+    stdin: true
+    stdout: true
+    quiet: true
+    description: install global dependencies
+    stderr: true

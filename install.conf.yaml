@@ -31,5 +31,18 @@
     stdin: true
     stdout: true
     quiet: true
-    description: install global dependencies
     stderr: true
+    description: install global dependencies
+  - command: git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+    stdin: true
+    stdout: true
+    quiet: true
+    stderr: true
+    description: Clone AstroNvim
+  - command: nvim --headless -c 'autocmd User LazyDone quitall'
+    stdin: true
+    stdout: true
+    quiet: true
+    stderr: true
+    description: Initial Neovim setup
+  

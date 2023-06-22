@@ -5,28 +5,8 @@
       create: true
       relink: true
 
-- link:
-    ~/.dotfiles: ''
-    ~/.vimrc: vimrc
-    ~/.spacemacs: spacemacs
-    ~/.gitconfig: gitconfig
-    ~/.config/zsh/.zshrc: zsh/zshrc
-    ~/.config/zsh/.p10k.zsh: zsh/p10k.zsh
-    ~/.zshenv: zsh/zshenv
-    ~/.tmux.conf: tmux.conf
-    ~/.agignore: agignore
-    ~/.config/karabiner: karabiner
-    ~/.config/alacritty/alacritty.yml: alacritty.yml
-    ~/.ideavimrc: ideavimrc
-    ~/.atamanrc.config: atamanrc.config
-    ~/.tool-versions: tool-versions
-    ~/Brewfile: Brewfile
-    ~/.config/nvim/lua/user: astronvim-user
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [stat /mnt/c/ &>/dev/null && cp -r alacritty.yml /mnt/c/Users/mrieg/AppData/Roaming/alacritty/alacritty-base.yml,  Copying alacritty settings for Windows] 
-  - [stat /mnt/c/ &>/dev/null && cp -r alacritty-windows.yml /mnt/c/Users/mrieg/AppData/Roaming/alacritty/alacritty.yml,  Copying alacritty settings for Windows] 
   - command: ./setup.sh
     stdin: true
     stdout: true
@@ -39,10 +19,28 @@
     quiet: true
     stderr: true
     description: Clone AstroNvim
-  - command: nvim --headless -c 'autocmd User LazyDone quitall'
-    stdin: true
-    stdout: true
-    quiet: true
-    stderr: true
-    description: Initial Neovim setup
+    # Doesn't ever stop
+    #- command: nvim --headless -V -c 'LazyDone quitall'
+    #stdin: true
+    #stdout: true
+    #quiet: false
+    #stderr: true
+    #description: Initial Neovim setup
   
+- link:
+    ~/.dotfiles: ''
+    ~/.vimrc: vimrc
+    ~/.spacemacs: spacemacs
+    ~/.gitconfig: gitconfig
+    ~/.config/zsh/.zshrc: zsh/zshrc
+    ~/.config/zsh/.p10k.zsh: zsh/p10k.zsh
+    ~/.zshenv: zsh/zshenv
+    ~/.tmux.conf: tmux.conf
+    ~/.agignore: agignore
+    ~/.config/karabiner: karabiner
+    ~/.ideavimrc: ideavimrc
+    ~/.atamanrc.config: atamanrc.config
+    ~/.tool-versions: tool-versions
+    ~/Brewfile: Brewfile
+    ~/.config/nvim/lua/user: astronvim-user
+

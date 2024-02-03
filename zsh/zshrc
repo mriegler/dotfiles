@@ -93,8 +93,8 @@ eval "$(zoxide init zsh)"
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# enable rtx
-eval "$(rtx activate -s zsh)"
+# enable mise
+eval "$(mise activate zsh)"
 
 # add homebrew autocompletions
 if type brew &>/dev/null

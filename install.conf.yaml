@@ -13,12 +13,6 @@
     quiet: true
     stderr: true
     description: install global dependencies
-  - command: git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-    stdin: true
-    stdout: true
-    quiet: true
-    stderr: true
-    description: Clone AstroNvim
     # Doesn't ever stop
     #- command: nvim --headless -V -c 'LazyDone quitall'
     #stdin: true
@@ -42,5 +36,7 @@
     ~/.atamanrc.config: atamanrc.config
     ~/.tool-versions: tool-versions
     ~/Brewfile: Brewfile
-    ~/.config/nvim/lua/user: astronvim-user
+    ~/.config/nvim: 
+      path: nvim-config
+      force: true
 

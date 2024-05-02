@@ -206,3 +206,6 @@
 [mergetool "sourcetree"]
 	cmd = /Users/marcel/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[maintenance]
+	auto = true
+    strategy = incremental

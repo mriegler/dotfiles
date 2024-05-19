@@ -85,6 +85,7 @@ alias -- ..="cd .."
 alias ...="cd ../.."
 alias -- -="cd -"
 alias gr="cd $(git root)"
+alias cat=bat
 
 # Settings
 export ALTERNATE_EDITOR=""

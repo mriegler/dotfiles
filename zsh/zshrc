@@ -78,7 +78,7 @@ export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
 
 # Aliases
-alias ll='exa --icons -alhG --git'
+alias ll='eza --icons -alhG --git'
 alias emacs='open -a /Applications/Emacs.app $1'
 alias g=git
 alias -- ..="cd .."

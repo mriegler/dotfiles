@@ -19,6 +19,8 @@ elif [[ -d "/opt/homebrew" ]]; then
 fi
 
 cd
+
+echo "Installing Brew dependencies from Brewfile"
 $BREW_COMMAND bundle
 
 
@@ -26,7 +28,9 @@ $BREW_COMMAND bundle
 if command -v "zsh" &> /dev/null \
     && ! [[ "$SHELL" == *"zsh" ]]; then
     if ! grep -q "$(which zsh)" /etc/shells; then 
+	echo "adding zsh to allowed login shells"
         echo "$(which zsh)" | sudo tee -a /etc/shells > /dev/null
     fi
+    echo "updating login shell"
     chsh -s "$(which zsh)"
 fi

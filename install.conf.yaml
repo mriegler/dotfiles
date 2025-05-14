@@ -39,4 +39,6 @@
     ~/.config/nvim: 
       path: nvim-config
       force: true
+    ~/.config/nix/nix.conf: nix.conf
+    ~/.config/wezterm/wezterm.lua: wezterm.lua
 

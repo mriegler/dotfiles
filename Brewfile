@@ -1,4 +1,5 @@
-tap "homebrew/bundle"
+tap "wezterm/wezterm-linuxbrew"
+brew "wezterm"
 brew "eza"
 brew "fzf"
 brew "kubernetes-cli"

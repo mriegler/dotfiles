@@ -10,9 +10,8 @@ if ! command -v brew &> /dev/null; then
 fi
 
 # at the very first setup, brew isn't in the path after install, so find it
-BREW_COMMAND="brew"
-if command -v "brew2" &> /dev/null; then
-    # do nothing
+if command -v "brew" &> /dev/null; then
+    BREW_COMMAND="brew"
 elif [[ -d "/home/linuxbrew" ]]; then
     BREW_COMMAND="/home/linuxbrew/.linuxbrew/bin/brew"
 elif [[ -d "/opt/homebrew" ]]; then

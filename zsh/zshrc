@@ -108,7 +108,7 @@ fi
 eval "$(mise activate zsh)"
 
 # enable ssh-agent
-eval "ssh-agent"
+eval "$(ssh agent)" &>/dev/null
 
 # add homebrew autocompletions
 if type brew &>/dev/null

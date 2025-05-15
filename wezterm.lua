@@ -12,7 +12,7 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 12
-config.color_scheme = 'Catppuccin Macchiato'
+config.color_scheme = 'OneHalfDark'
 
 -- Finally, return the configuration to wezterm:
 return config

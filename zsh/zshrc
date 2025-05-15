@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # setup plugin manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -109,6 +110,7 @@ eval "$(mise activate zsh)"
 
 # enable ssh-agent
 eval "$(ssh-agent)" &>/dev/null
+ssh-add &>/dev/null
 
 # add homebrew autocompletions
 if type brew &>/dev/null

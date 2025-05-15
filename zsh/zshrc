@@ -107,6 +107,9 @@ fi
 # enable mise
 eval "$(mise activate zsh)"
 
+# enable ssh-agent
+eval "ssh-agent"
+
 # add homebrew autocompletions
 if type brew &>/dev/null
 then
